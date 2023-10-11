@@ -13,7 +13,7 @@
 				if ($_POST["funidad"] =="pie") {
 					$v_pie = $_POST["fcantidad"];
 					$v_metros = $v_pie * 0.3048;
-					echo $v_pie."pie(s) = ".$_metros." metro(s)";
+					echo $v_pie."pie(s) = ".$v_metros." metro(s)";
 				} else {
 				  echo "Unidad no soportada";
 				}
