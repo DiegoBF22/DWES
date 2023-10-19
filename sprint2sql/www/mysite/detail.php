@@ -5,7 +5,7 @@
 	<body>
 		<?php
 			if (!isset($_GET['id'])) {
-				die('No se ha especificado una canción');
+				die('No se ha especificado un juego');
 			}
 			$juego_id = $_GET['id'];
 			$query = 'SELECT * FROM tJuegos WHERE id='.$juego_id;
