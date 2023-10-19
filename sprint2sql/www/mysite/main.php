@@ -33,7 +33,11 @@
 			while ($row = mysqli_fetch_array($result)) {
 			    	echo '<tr>';
 				echo '<td>';
+				echo '<a href="/detail.php?id=';
+				echo $row[0];
+				echo '">';
 				echo $row[1];
+				echo '</a>';
 				echo '</td>';
 				echo '<td>';
 				echo '<img src= "';
