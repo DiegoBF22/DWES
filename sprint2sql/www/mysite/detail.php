@@ -3,6 +3,7 @@
 ?>
 <html>
 	<body>
+		<div align="center">
 		<?php
 			if (!isset($_GET['id'])) {
 				die('No se ha especificado un juego');
@@ -14,15 +15,16 @@
 			echo '<h1>'.$only_row[1].'</h1>';
 			echo '<img src= "';
 			echo $only_row[2];
-			echo '"width= "150"px>';
+			echo '"width= "500"px align="center">';
 		?>
+		</div>
 		<h3>Comentarios:</h3>
 		<ul>
 			<?php
 				$query2 = 'SELECT * FROM tComentarios WHERE juego_id='.$juego_id;
 				$result2 = mysqli_query($db, $query2) or die('Query error');
 				while ($row = mysqli_fetch_array($result2)) {
-					echo '<li>'.$row[1].'</li>';
+					echo '<li>'.$row[1]. ' | '  .$row[4].'</li>';
 				}
 				mysqli_close($db);
 			?>
