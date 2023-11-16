@@ -1,0 +1,43 @@
+th {
+    background-color: rgb(83, 157, 241);
+}
+
+td {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+td {
+    opacity: 0.5;
+    background-color: initial;
+    transition: all 0.5s ease-in-out ;
+    
+}
+
+tr:hover td{
+    opacity: 1;
+    background-color: rgb(28, 245, 216);
+}
+
+tr:hover td:first-child{
+    opacity: 1;
+    background-color: rgb(168, 84, 247);
+}
+
+img {
+    width: 250px;
+    height: 150px;
+    transition: all 0.5s ease-in-out;
+}
+
+tr:hover img {
+    width: 350px;
+    height: 210px;
+}
+
+body > a {
+    border: 1px solid black;
+    padding: 10px 5px;
+}

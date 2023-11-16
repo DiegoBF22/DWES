@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio de sesión</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("login_form").addEventListener('submit', validateForm);
+        });
+
+        function validateForm(event) {
+            event.preventDefault();
+            let mail = document.getElementById('mail').value;
+            if (mail.length == 0) {
+                alert('Tienes que introducir un correo');
+                return;
+            }
+            let passw = document.getElementById('pass').value;
+            if (passw.length == 0) {
+                alert('Tienes que introducir una contraseña');
+                return;
+            }
+            this.submit();
+        }
+
+    </script>
+</head>
+<body>
+    <h3>Iniciar Sesión</h3>
+    <form action="/login.php" method="post" id="login_form">
+        <label for="email">Introduzca su email :</label>
+        <input type="text" name="email" id="email"><br>
+        <label for="contrasena">Introduzca su contraseña :</label>
+        <input type="password" name="contrasena" id="contrasena"><br>
+        <input type="submit" value="Log In">
+    </form>
+</body>
+</html>
